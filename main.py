@@ -19,8 +19,7 @@ def index():
 
 @app.route('/welcome', methods=['POST'])
 def welcome():
-    # Use asyncio.run para chamar uma função assíncrona dentro de uma função síncrona
-    asyncio.run(send_message(get_text_message_input(app.config['RECIPIENT_WAID'], 'Welcome to the Flight Confirmation Demo App for Python!')))
+    
     return redirect(url_for('index'))
 
 
